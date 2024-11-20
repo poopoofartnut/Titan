@@ -18,7 +18,7 @@ class Button:
 
     def update(self):
         raylib.DrawRectangleRounded((self.x, self.y, self.width, self.height), self.border_radius, 1, self.fill_color)
-        raylib.DrawRectangleRoundedLines((self.x, self.y, self.width, self.height), self.border_radius, 1, self.border_width, self.border_color)
+        raylib.DrawRectangleRoundedLines((self.x, self.y, self.width, self.height), self.border_radius, self.border_width, self.border_color)
 
         text_size = raylib.MeasureTextEx(FONT, self.text, self.font_size, 3)
         raylib.DrawTextEx(FONT, self.text, (self.x + self.width / 2 - text_size.x / 2, self.y + self.height / 2 - text_size.y / 2), self.font_size, 3, self.text_color)
