@@ -21,7 +21,7 @@ class Ticker:
 
     def update(self):
         raylib.DrawRectangleRounded((self.position.x, self.position.y, self.dimensions.x, self.dimensions.y), self.border_radius, 1, raylib.WHITE)
-        raylib.DrawRectangleRoundedLines((self.position.x, self.position.y, self.dimensions.x, self.dimensions.y), self.border_radius, 1, 2, raylib.BLACK)
+        raylib.DrawRectangleRoundedLines((self.position.x, self.position.y, self.dimensions.x, self.dimensions.y), self.border_radius, 2, raylib.BLACK)
 
         text_size = raylib.MeasureTextEx(FONT, str(round(self.value, 2)).encode("ascii"), self.font_size, 3)
         raylib.DrawTextEx(FONT, str(round(self.value, 2)).encode("ascii"), (self.position.x + self.dimensions.x / 2 - text_size.x / 2, self.position.y + self.dimensions.y / 2 - text_size.y / 2), self.font_size, 3, raylib.BLACK)

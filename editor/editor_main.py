@@ -438,7 +438,7 @@ class EditorHandler:
         box_height = 30
 
         # Draw defining rectangle.
-        raylib.DrawRectangleRoundedLines((raylib.GetScreenWidth() / 2 - box_width / 2, 10, box_width, box_height), 0.5, 1, 2, raylib.BLACK)
+        raylib.DrawRectangleRoundedLines((raylib.GetScreenWidth() / 2 - box_width / 2, 10, box_width, box_height), 0.5, 2, raylib.BLACK)
 
         # Create play and stop buttons.
         play_button = Button(raylib.GetScreenWidth() / 2 - box_width / 2 + 10, 15, 20, 20, 1, 0, raylib.BLACK, raylib.WHITE, b"/\\", raylib.BLACK, "", 20)
